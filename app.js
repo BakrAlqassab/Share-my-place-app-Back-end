@@ -32,4 +32,4 @@ app.use(locationRoutes);
 //   });
 // });
 
-app.listen(3000);
+.listen(process.env.PORT || 5000)
