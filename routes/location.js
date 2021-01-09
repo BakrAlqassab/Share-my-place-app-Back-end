@@ -40,7 +40,7 @@ router.post('/add-location', (req, res, next) => {
 });
 
 router.get('/location/:lid', (req, res, next) => {
-  const locationId = req.params.lid;
+  const locationId = req.params.locId;
 
   client.connect(function(err, client) {
     const db = client.db('locations');
