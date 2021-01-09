@@ -4,11 +4,6 @@ const bodyParser = require("body-parser");
 const locationRoutes = require("./routes/location");
 
 const app = express();
-// const distDir = __dirname + "/dist/";
-// app.use(express.static(distDir));
-
-// app.set('view engine', 'ejs');
-// app.set('views', 'views');
 
 
 app.use(bodyParser.json());
