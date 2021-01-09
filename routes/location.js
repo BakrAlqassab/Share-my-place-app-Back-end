@@ -40,7 +40,7 @@ router.post('/add-location', (req, res, next) => {
 });
 
 router.get('/location/:lid', (req, res, next) => {
-  const locationId = req.params.locId;
+  const locationId = req.params.lid;
 
   client.connect(function(err, client) {
     const db = client.db('locations');
@@ -53,7 +53,7 @@ router.get('/location/:lid', (req, res, next) => {
       function(err, doc) {
         // if (err) {}
         if (!doc) {
-          return res.status(404).json({ message: 'Not found!!' });
+          return res.status(404).json({ message: 'Not found!' });
         }
         res.json({ address: doc.address, coordinates: doc.coords });
       }
