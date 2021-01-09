@@ -52,9 +52,9 @@ router.get('/location/:lid', (req, res, next) => {
       },
       function(err, doc) {
         // if (err) {}
-        // if (!doc) {
-        //   return res.status(404).json({ message: 'Not found!' });
-        // }
+        if (!doc) {
+          return res.status(404).json({ message: 'Not found!' });
+        }
         res.json({ address: doc.address, coordinates: doc.coords });
       }
     );
